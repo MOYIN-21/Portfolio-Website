@@ -10,7 +10,7 @@ const MobileMenu = ({menuOpen, setMenuOpen}) => {
     }, [menuOpen]);
 
     return (
-        <div className='fixed top-0 left-0 w-full bg-black z-40 flex flex-col items-center justify-center transition-all
+        <div className='fixed text-inter-medium text-sm leading-5 top-0 left-0 w-full bg-black z-40 flex flex-col items-center justify-center transition-all
         duration-300 ease-in-out' style={{
             height: menuOpen ? '100vh' : '0',
             opacity: menuOpen ? '1' : '0',
@@ -22,17 +22,17 @@ const MobileMenu = ({menuOpen, setMenuOpen}) => {
                 <IoCloseOutline/>
             </button>
 
-            <Link to='/' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5  text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>Home</Link>
-            <Link to='/about' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/about' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5  text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>About</Link>
-            <Link to='/projects' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/projects' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5 text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>Projects</Link>
-            <Link to='/skills' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/skills' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5 text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>Skills</Link>
-            <Link to='/blog' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/blog' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5 text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>Blog</Link>
-            <Link to='/contact' onClick={() => setMenuOpen(false)} className='text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            <Link to='/contact' onClick={() => setMenuOpen(false)} className='text-inter-medium text-sm leading-5 text-white my-4 transform transition-transform duration-300
                 ${menuOpen ? "opacity-1 translate-0" : "opacity-0 translate-y-5'>Contact</Link>
         </div>
     )

@@ -1,42 +1,42 @@
-import React, {useEffect} from 'react'
-import {GiHamburgerMenu} from "react-icons/gi";
-import {Link} from "react-router-dom";
+import React, { useEffect } from 'react'
+import { GiHamburgerMenu } from "react-icons/gi"
+import { Link } from "react-router-dom"
 
+const NavBar = ({ menuOpen, setMenuOpen }) => {
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  }, [menuOpen]);
 
-const NavBar = ({menuOpen, setMenuOpen}) => {
+  return (
+    <div className="fixed top-0 bg-[#141414] w-full z-40 px-4">
+      <div className="max-w-5xl mx-auto py-4">
+        <div className="flex justify-between items-center h-16 text-[#FAFAFA]">
+          <Link 
+            to="/home" 
+            className="flex flex-row gap-2 text-2xl leading-8 md:leading-tight tracking-normal align-middle text-semantic-heading1"
+          >
+            Ugochi <span className='hidden lg:block'>Nwokonko </span> 
+          </Link>
 
-    useEffect(() => {
-        document.body.style.overflow = menuOpen ? "hidden" : "auto";
-    }, [menuOpen]);
+          <div 
+            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+            onClick={() => setMenuOpen(prev => !prev)}
+          >
+            <GiHamburgerMenu />
+          </div>
 
-    return (
-        <div className='fixed top-0 w-full z-40'>
-            <div className='max-w-5xl mx-auto px-4'>
-                <div className='flex justify-between items-center h-16'>
-                    <Link to='/' className='text-xl font-bold text-white'>
-                        Ugochi Nwokonko
-                    </Link>
-
-                    <div className='w-7 h-5 relative cursoe-pointer z-40 md:hidden'
-                         onClick={() => setMenuOpen((prev) => !prev)}>
-                        <GiHamburgerMenu/>
-                    </div>
-
-                    <div className='hidden md:flex items-center space-x-8'>
-                        <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-                        <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-                        <Link to="/projects"
-                              className="text-gray-300 hover:text-white transition-colors">Projects</Link>
-                        <Link to="/skills" className="text-gray-300 hover:text-white transition-colors">Skills</Link>
-                        <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
-                        <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
-                    </div>
-                </div>
-
-            </div>
-
+          <div className="hidden md:flex items-center space-x-10 text-inter-medium text-sm leading-5">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/skills">Skills</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default NavBar

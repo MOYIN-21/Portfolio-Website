@@ -8,15 +8,17 @@ import HomeHero from './HomeHero'
 
 const Home = () => {
   return (
-     <section id="home" className="flex flex-col items-center justify-center relative"
-  >
-    <HomeHero/>
-    <HomeAbout/>
-    <HomeProjects/>
-    <HomeSkills/>
-    <HomeBlog/>
-    <HomeContact/>
-  </section>
+    <section
+      id="home"
+      className="flex flex-col gap-y-30" 
+    >
+      <HomeHero />
+      <HomeAbout />
+      <HomeProjects />
+      <HomeSkills />
+      <HomeBlog />
+      <HomeContact />
+    </section>
   )
 }
 

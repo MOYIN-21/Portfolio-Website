@@ -1,9 +1,116 @@
 @import "tailwindcss";
 
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
+
+/* ==========================
+   INTER FONTS
+========================== */
+
+
+html, body { margin: 0; 
+  padding: 0; 
+  background-color: black; 
+  color: white;
+  height: 100%; 
+  }
+
+.text-inter-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.text-inter-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.text-inter-semibold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-inter-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-inter-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text-semantic-blockquote {
+  font-family: 'Inter', sans-serif; 
+  font-weight: 500;                       
+  font-style: italic;                     
+  font-size: 20px;                         
+  line-height: 28px;                        
+  letter-spacing: 0;
+  text-align: center;                      
+  vertical-align: middle;                  
+}
+
+/* ==========================
+   PLAYFAIR DISPLAY FONTS
+========================== */
+
+.playfair-regular {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-semantic-heading2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.playfair-text-semantic-heading2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.playfair-text-semantic-heading3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Text-playfair-display-semiBold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-semantic-heading1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair-extrabold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.playfair-italic {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-bold-italic {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
