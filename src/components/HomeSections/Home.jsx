@@ -5,6 +5,7 @@ import HomeSkills from './HomeSkills'
 import HomeBlog from './HomeBlog'
 import HomeContact from './HomeContact'
 import HomeHero from './HomeHero'
+import HomeFooter from './HomeFooter'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <HomeSkills />
       <HomeBlog />
       <HomeContact />
+      <HomeFooter/>
     </section>
   )
 }
