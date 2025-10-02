@@ -39,7 +39,7 @@ const projects = [
 
 const HomeProjects = () => {
   return (
-    <section id="homeprojects" className="min-h-screen relative px-4 flex flex-col items-center space-y-5">
+    <section id="homeprojects" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:px-14 flex flex-col items-center space-y-7">
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto" />
 
       <p className="text-semantic-heading2 md:text-5xl leading-12 font-medium text-2xl tracking-normal text-center text-[#FAFAFA]">
@@ -67,10 +67,10 @@ const HomeProjects = () => {
 
             <div className="flex flex-col space-y-2">
               <p className="Text-playfair-display-semiBold text-sm leading-6 text-[#FAFAFA]">Problem</p>
-              <p className=" text-sm leading-5 text-[#D9D9D9] ">{project.problem}</p>
+              <p className="text-inter-regular text-sm leading-5 text-[#D9D9D9] ">{project.problem}</p>
 
               <p className="Text-playfair-display-semiBold text-sm leading-6 text-[#FAFAFA]">Solution</p>
-              <p className="text-[#D9D9D9] text-sm leading-5 ">{project.solution}</p>
+              <p className="text-[#D9D9D9] text-inter-regular text-sm leading-5 ">{project.solution}</p>
             </div>
 
             <p className="Text-playfair-display-semiBold text-sm leading-6 text-[#FAFAFA]">Key Metrics</p>
