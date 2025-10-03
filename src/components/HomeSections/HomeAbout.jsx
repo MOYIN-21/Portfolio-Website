@@ -3,7 +3,7 @@ import { LuLightbulb } from "react-icons/lu";
 import Impact from '../../assets/Impact.svg';
 import Leadership from '../../assets/Leadership.svg';
 import Strategy from '../../assets/Strategy.svg';
-import love from '../../assets/love.svg';
+import love from '../../assets/Love.svg';
 
 const HomeAbout = () => {
   const cards = [
