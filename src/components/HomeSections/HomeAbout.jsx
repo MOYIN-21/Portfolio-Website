@@ -3,7 +3,7 @@ import { LuLightbulb } from "react-icons/lu";
 import Impact from '../../assets/Impact.svg';
 import Leadership from '../../assets/Leadership.svg';
 import Strategy from '../../assets/Strategy.svg';
-import love from '../../assets/Love.svg';
+import Love from '../../assets/Love.svg';
 
 const HomeAbout = () => {
   const cards = [
@@ -79,7 +79,7 @@ const HomeAbout = () => {
 
       <div className="flex flex-col justify-start mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl px-6 md:px-8 py-10 rounded-2xl">
         <div className="flex items-center gap-3">
-          <img src={love} alt="Impact" className="w-6 h-6" />
+          <img src={Love} alt="Impact" className="w-6 h-6" />
           <p className="Text-playfair-display-semiBold text-xl leading-7 text-[#FAFAFA] tracking-normal">
             Interest & Passions
           </p>
