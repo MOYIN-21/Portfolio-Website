@@ -69,7 +69,7 @@ const HomeBlog = () => {
   return (
     <section
       id="homeabout"
-      className="min-h-screen relative px-4 flex flex-col items-center space-y-5"
+      className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center space-y-5"
     >
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto" />
       <p className="text-semantic-heading2 md:text-5xl leading-12 font-medium text-2xl text-center text-[#FAFAFA]">
@@ -166,7 +166,7 @@ const HomeBlog = () => {
         ))}
       </div>
 
-      <div className="flex flex-col text-center items-center py-6 md:py-8 px-4 md:px-8 mt-10 bg-[#1F1F1F] border border-[#1414141A] w-full max-w-5xl rounded-2xl gap-4">
+      <div className="flex flex-col text-center items-center py-6 md:py-8 px-4 md:px-8 mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl rounded-2xl gap-4">
   <p className="Text-playfair-display-semiBold md:text-2xl leading-8 text-[#FAFAFA]">
     Stay Updated
   </p>

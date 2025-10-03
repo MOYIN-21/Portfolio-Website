@@ -91,7 +91,7 @@ const HomeSkills = () => {
   return (
     <section
       id="homeabout"
-      className="min-h-screen relative px-4 flex flex-col items-center space-y-5"
+      className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center space-y-5"
     >
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto " />
       <p className="text-semantic-heading2 md:text-5xl leading-12 text-semantic-heading2  text-[#FAFAFA] mt-4">

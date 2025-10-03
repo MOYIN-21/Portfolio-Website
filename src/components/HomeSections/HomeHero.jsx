@@ -54,7 +54,7 @@ const HomeHero = () => {
     // </section>
     <section
   id="homehero"
-  className="min-h-screen bg-[#1F1F1F] py-10 flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center"
+  className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center"
 >
   <hr className="w-14 border-3 border-[#009999] rounded" />
   <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">

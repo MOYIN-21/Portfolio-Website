@@ -5,7 +5,7 @@ import { FiLinkedin } from "react-icons/fi";
 
 const HomeFooter = () => {
   return (
-    <section className="bg-black text-white">
+    <section className="bg-black px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 text-white">
       <div className="flex flex-col md:py-16 py- px-6 md:max-w-6xl mx-auto">
         
         <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-20">
