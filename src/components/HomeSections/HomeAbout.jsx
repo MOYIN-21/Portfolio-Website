@@ -39,7 +39,7 @@ const HomeAbout = () => {
   ];
 
   return (
-    <section id="homeabout" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col px-4 items-center">
+    <section id="homeabout" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center">
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto mt-4" />
 
       <p className="font-medium text-2xl lg:text-4xl playfair-text-semantic-heading2 md:text-5xl leading-12 tracking-normal text-center text-[#FAFAFA] mt-4">
