@@ -91,7 +91,7 @@ const About = () => {
   return (
     <section
       id="homehero"
-      className="min-h-screen px-4 flex flex-col md:px-10 xl:px-12 space-y-24 items-center py-10 md:pt-48"
+      className="min-h-screen w-full px-4 flex flex-col md:px-10 xl:px-12 space-y-24 items-center py-10 md:pt-48"
     >
       
       <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
@@ -133,8 +133,15 @@ const About = () => {
         </div>
 
        
-        <div className="relative flex-shrink-0 rounded-xl overflow-hidden">
-          <img src={about} alt="Profile" className="rounded-2xl w-100 h-95 object-contain" />
+        {/* <div className="relative flex-shrink-0 rounded-xl overflow-hidden">
+          <img src={about} alt="Profile" className="rounded-2xl w-100 h-95 object-contain" /> */}
+          <div className="relative flex-shrink-0 rounded-xl overflow-hidden w-full md:w-[400px]">
+          <img
+            src={about}
+            alt="Profile"
+            className="rounded-2xl w-full h-full object-cover"
+          />
+
 
           <div className="absolute top-2 right-2 bg-[#00C3D0] text-white px-4 py-2 rounded-xl shadow-sm flex flex-col items-center">
             <GiInfinity className="text-2xl mb-1" />
@@ -160,7 +167,7 @@ const About = () => {
         </div>
 
        
-        <div className="grid grid-cols-1 gap-10 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 max-w-7xl gap-10 w-full mx-auto">
           {experiences.map((exp, index) => (
             <div key={index} className="flex flex-col text-center items-center p-4 md:p-8 bg-[#1F1F1F] border border-[#EBEBEB80] rounded-2xl gap-4">
               <div className="flex flex-col md:flex-row justify-between gap-6 w-full">
@@ -257,7 +264,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className='flex flex-col space-y-12 text-center'>
+        <div className='flex flex-col space-y-12 max-w-6xl text-center w-full'>
           <div className='flex flex-col space-y-6'>
             <p className="playfair-text-semantic-heading2 leading-8 text-center text-[#FAFAFA]">
               Professional Experience
@@ -268,7 +275,7 @@ const About = () => {
             </p>
 
             <div className="mt-8">
-              <div className="flex flex-wrap gap-4 grid-rows-3">
+              <div className="flex flex-wrap gap-4 lg:grid-rows-3 md:grid-rows-2 xl:grid-rows-2 grid-rows-1">
                 {interests.map((Interest, idx) => (
                   <div
                     key={idx}
@@ -281,7 +288,7 @@ const About = () => {
             </div>
 
             <div className='md:py-30 py-10'>
-              <hr className="w-md border border-[#333333] rounded mx-auto" />
+              <hr className="md:w-md w-full border border-[#333333] rounded mx-auto" />
             </div>
 
             <FooterCTASection
