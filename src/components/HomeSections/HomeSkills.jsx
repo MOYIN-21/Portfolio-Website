@@ -103,26 +103,26 @@ const HomeSkills = () => {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl mx-auto mt-10">
-  {skills.map((skill, index) => (
-    <div
-      key={index}
-      className="border border-[#EBEBEB80] bg-[#1F1F1F] rounded-lg p-6 sm:p-8 flex flex-col"
-    >
-      <div className="flex items-center gap-3 mb-4">
-        <img src={skill.icon} alt={skill.title} className="w-6 h-6 sm:w-8 sm:h-8" />
-        <h2 className="Text-playfair-display-semiBold text-xl leading-7 text-[#FAFAFA]">
-          {skill.title}
-        </h2>
-      </div>
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="border border-[#EBEBEB80] bg-[#1F1F1F] rounded-lg p-6 sm:p-8 flex flex-col"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <img src={skill.icon} alt={skill.title} className="w-6 h-6 sm:w-8 sm:h-8" />
+              <h2 className="Text-playfair-display-semiBold text-xl leading-7 text-[#FAFAFA]">
+                {skill.title}
+              </h2>
+            </div>
 
-      <ul className="text-inter-regular text-sm leading-6 list-disc list-inside marker:text-[#00C3D0] text-[#D9D9D9] font-inter text-left space-y-1">
-        {skill.items.map((item, i) => (
-          <li key={i}>{item}</li>
+            <ul className="text-inter-regular text-sm leading-6 list-disc list-inside marker:text-[#00C3D0] text-[#D9D9D9] font-inter text-left space-y-1">
+              {skill.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
-    </div>
-  ))}
-</div>
+      </div>
 
 
       <div className="flex flex-col mt-10 bg-[#1F1F1F] w-full max-w-5xl px-4 md:p-12 py-8 rounded-2xl gap-4">
@@ -130,19 +130,20 @@ const HomeSkills = () => {
           Tools & Technologies
         </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-      {tools.map((tool, index) => (
-        <div
-          key={index}
-          className="py-3 px-4 text-center rounded-md border border-[#EBEBEB80]"
-        >
-          <p className="text-inter-medium text-lg leading-7 font-medium text-[#FAFAFA]">{tool.name}</p>
-          <p className="text-inter-regular text-[#737373] text-sm leading-5">{tool.category}</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+          {tools.map((tool, index) => (
+            <div
+              key={index}
+              className="py-3 px-4 text-center rounded-md border border-[#EBEBEB80]"
+            >
+              <p className="text-inter-medium text-lg leading-7 font-medium text-[#FAFAFA]">{tool.name}</p>
+              <p className="text-inter-regular text-[#737373] text-sm leading-5">{tool.category}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-
+        
       </div>
+
        <div className="md:mt-10 mt-5 justify-center flex flex-col max-w-4xl">
           <div className="flex flex-row gap-8 justify-center mb-4 ">
             <GoLightBulb className="text-[#00C3D0] w-8 h-8 font-bold"/>

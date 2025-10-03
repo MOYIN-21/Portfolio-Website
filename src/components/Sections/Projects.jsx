@@ -6,7 +6,8 @@ import featureProjects from '../../assets/featureProjects.svg';
 import GreenCity from "../../assets/GreenCity.svg";
 import FinanceFlow from "../../assets/FinanceFlow.svg";
 import LearnLab from "../../assets/LearnLab.svg";
-import TravelMate from "../../assets/TravelMate.svg"
+import TravelMate from "../../assets/TravelMate.svg";
+import FooterCTASection from '../reusables/FooterCTASection'
 
 const projects = [
   {
@@ -298,25 +299,32 @@ const Projects = () => {
           </span>
         </div>
         
-         <div className="flex flex-col items-center w-full max-w-2xl px-6 text-center space-y-4">
-          <p className='playfair-text-semantic-heading2 leading-8 text-2xl'>Ready to Start Your Next Project?</p>
+        {/* <div className="flex flex-col items-center w-full max-w-2xl px-6 text-center space-y-4">
+          <p className='playfair-text-semantic-heading2 leading-8 text-2xl'>?</p>
           <p className="text-inter-regular text-lg leading-6 text-[#D9D9D9]">
-            Let's collaborate to create exceptional digital experiences that drive results and delight users.
+            
           </p>
           <div className=' flex flex-row gap-3'>
              <p
                 className="inline-flex items-center gap-2 text-inter-medium text-sm leading-6 rounded-md text-[#FAFAFA] py-2.5 px-3"
               >
-                 Start a project
+                 
               </p>
                <Link
                 to="/about"
                 className="inline-flex items-center gap-2 text-inter-medium text-sm leading-6 rounded-md border border-[#262626] bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
-                Learn More About Me
+                
               </Link>
           </div>
-      </div>
+        </div> */}
+        <FooterCTASection
+              title="Ready to Start Your Next Project?"
+              description="Let's collaborate to create exceptional digital experiences that drive results and delight users."
+              primaryText="Start a project"
+              secondaryText="Learn More About Me"
+              secondaryLink="/about"
+            />
 
     </section>
   )

@@ -62,6 +62,8 @@ const blogPosts = [
   },
 ];
 
+
+
 const HomeBlog = () => {
   const HandleSubscription = ()=>{
 
@@ -167,24 +169,24 @@ const HomeBlog = () => {
       </div>
 
       <div className="flex flex-col text-center items-center py-6 md:py-8 px-4 md:px-8 mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl rounded-2xl gap-4">
-  <p className="Text-playfair-display-semiBold md:text-2xl leading-8 text-[#FAFAFA]">
-    Stay Updated
-  </p>
-  <p className="text-inter-regular text-sm leading-6 text-[#D9D9D9]">
-    Get notified when I publish new insights about product management, leadership, and innovation.
-  </p>
+        <p className="Text-playfair-display-semiBold md:text-2xl leading-8 text-[#FAFAFA]">
+          Stay Updated
+        </p>
+        <p className="text-inter-regular text-sm leading-6 text-[#D9D9D9]">
+          Get notified when I publish new insights about product management, leadership, and innovation.
+        </p>
 
-  <div className="flex flex-col md:flex-row items-center w-full md:w-auto space-y-4 md:space-y-0 md:space-x-4">
-    <input
-      type="email"
-      placeholder="Enter your email"
-      className="bg-[#333333] text-inter-regular placeholder:text-inter-regular outline-none placeholder:text-[#D9D9D9] text-[#D9D9D9] py-2.5 px-4 w-full md:w-80 h-14 rounded-md"
-    />
-    <button onClick={HandleSubscription} className="bg-[#141414] text-inter-medium text-sm leading-5 text-[#FAFAFA] px-4 py-2.5 h-14 rounded-md w-full md:w-auto cursor-pointer">
-      Subscribe
-    </button>
-  </div>
-</div>
+        <div className="flex flex-col md:flex-row items-center w-full md:w-auto space-y-4 md:space-y-0 md:space-x-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="bg-[#333333] text-inter-regular placeholder:text-inter-regular outline-none placeholder:text-[#D9D9D9] text-[#D9D9D9] py-2.5 px-4 w-full md:w-80 h-14 rounded-md"
+          />
+          <button onClick={HandleSubscription} className="bg-[#141414] text-inter-medium text-sm leading-5 text-[#FAFAFA] px-4 py-2.5 h-14 rounded-md w-full md:w-auto cursor-pointer">
+            Subscribe
+          </button>
+        </div>
+      </div>
 
     </section>
   );

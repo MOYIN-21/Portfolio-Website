@@ -65,7 +65,7 @@ const HomeContact = () => {
   const isFormValid = formData.name && formData.email && formData.subject && formData.message;
 
   return (
-    <section id="homecontact" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col px-4 items-center">
+    <section id="homecontact" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center">
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto mt-4" />
 
       <div className='md:max-w-5xl w-full'>
