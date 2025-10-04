@@ -114,7 +114,7 @@ const Projects = () => {
       className="min-h-screen px-4 flex flex-col space-y-24 items-center py-10"
     >
       <div className='pt-8'>
-        <p className="text-2xl text-semantic-heading1 md:text-7xl leading-16 text-center text-[#FAFAFA] pt-10">
+        <p className="text-3xl text-semantic-heading1 md:text-7xl leading-16 text-center text-[#FAFAFA] pt-10">
               Featured <span className="text-[#00C3D0]">Projects</span>
             </p>
 
@@ -125,7 +125,7 @@ const Projects = () => {
       </div>
           
      <div className='flex flex-col space-y-12 md:pt-20'>
-      <p className='playfair-text-semantic-heading2 text-5xl leading-12 text-[#FAFAFA]'>Featured Work</p>
+      <p className='playfair-text-semantic-heading2 md:text-5xl text-2xl leading-12 text-[#FAFAFA]'>Featured Work</p>
       <div className='space-y-12'>
          {projects.slice(0, 2).map((project, idx) => (
         <div
@@ -206,7 +206,7 @@ const Projects = () => {
      </div>
 
       <div className='flex flex-col max-w-7xl space-y-12'>
-        <p className='playfair-text-semantic-heading2 text-3xl leading-8 text-[#FAFAFA]'>More Projects</p>
+        <p className='playfair-text-semantic-heading2 md:text-3xl text-2xl leading-8 text-[#FAFAFA]'>More Projects</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
         {projects.slice(2).map((project, idx) => (
            <div
@@ -284,7 +284,7 @@ const Projects = () => {
       </div>
       </div>
 
-       <div className="w-full text-semantic-heading1 text-3xl leading-9 text-[#00C3D0] flex flex-row justify-evenly">
+       <div className="w-full text-semantic-heading1 text-3xl leading-9 text-[#00C3D0] grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
           <span>
             <p>150K+</p>
             <p className='text-[#FAFAFA] text-inter-regular text-sm leading-6'>Users Impacted</p>

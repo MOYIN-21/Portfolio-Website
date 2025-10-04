@@ -100,7 +100,7 @@ const About = () => {
             About<span className="text-[#00C3D0] pl-2">Ugochi</span>
           </p>
 
-          <p className="text-semantic-heading2 text-5xl max-w-xl leading-12 text-[#FAFAFA] ">
+          <p className="text-semantic-heading2 md:text-5xl text-3xl max-w-xl leading-12 text-[#FAFAFA] ">
             Crafting Digital Experiences with Purpose
           </p>
 
@@ -158,7 +158,7 @@ const About = () => {
     
       <div className='flex flex-col space-y-16 text-center'>
         <div className='flex flex-col space-y-6'>
-          <p className="font-medium playfair-text-semantic-heading2 text-5xl leading-12 text-[#FAFAFA]">
+          <p className="font-medium playfair-text-semantic-heading2 md:text-5xl text-2xl leading-12 text-[#FAFAFA]">
             Professional Experience
           </p>
           <p className="text-xl leading-7 text-[#A1A1AA] max-w-2xl mx-auto">
