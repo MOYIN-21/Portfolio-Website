@@ -168,7 +168,7 @@ const HomeBlog = () => {
         ))}
       </div>
 
-      <div className="flex flex-col text-center items-center py-6 md:py-8 px-4 md:px-8 mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl rounded-2xl gap-4">
+      <div className="flex flex-col text-center items-center py-6 md:py-8 px-4 md:px-8 mt-10 bg-[#1F1F1F] border border-[#EBEBEB80]     w-full max-w-5xl rounded-2xl gap-4">
         <p className="Text-playfair-display-semiBold md:text-2xl leading-8 text-[#FAFAFA]">
           Stay Updated
         </p>
