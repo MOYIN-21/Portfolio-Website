@@ -111,7 +111,7 @@ const Projects = () => {
   return (
     <section
       id="homeprojects"
-      className="min-h-screen px-4 flex flex-col space-y-24 items-center py-10"
+      className="min-h-screen px-4 flex flex-col space-y-24 items-center py-10 pt-30"
     >
       <div className='pt-8'>
         <p className="text-3xl text-semantic-heading1 md:text-7xl leading-16 text-center text-[#FAFAFA] pt-10">

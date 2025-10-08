@@ -54,9 +54,11 @@ const HomeHero = () => {
     // </section>
     <section
   id="homehero"
-  className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center"
+  className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center py-10 "
 >
-  <hr className="w-14 border-3 border-[#009999] rounded" />
+  <div className="py-8">
+      <hr className="w-14 border-3 border-[#009999] rounded"/>
+  </div>
   <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
     
     <div className="flex-1 space-y-6">
@@ -64,7 +66,7 @@ const HomeHero = () => {
         Hi, I'm <span className="text-[#008080]">Ugochi</span>
       </p>
 
-      <p className="text-semantic-heading2 text-5xl leading-12 text-[#FAFAFA] ">
+      <p className="text-semantic-heading2 md:text-5xl text-4xl leading-12 text-[#FAFAFA] ">
         Building Digital Products <br />
         That Solve Real <br />
         Problems
