@@ -29,11 +29,6 @@ const skills = [
     title: "Analytics & Data",
     items: ["Google Analytics", "Mixpanel", "Amplitude", "Tableau", "SQL", "A/B Testing"],
   },
-  // {
-  //   icon: Design,
-  //   title: "Design & UX",
-  //   items: ["Figma", "Sketch", "User Research", "Wireframing", "Prototyping", "Design System"],
-  // },
   {
     icon: Technical,
     title: "Technical",
@@ -51,18 +46,6 @@ const skills = [
       "Conflict Resolution",
     ],
   },
-  // {
-  //   icon: Buisness,
-  //   title: "Business",
-  //   items: [
-  //     "Financial Modeling",
-  //     "KPI Development",
-  //     "Business Case Development",
-  //     "Risk Assessment",
-  //     "Vendor Management",
-  //     "Process Optimization",
-  //   ],
-  // },
 ];
 
 const passions = [
@@ -212,6 +195,7 @@ const Skills = () => {
           title="Let's Build Something Great Together"
           description="Ready to leverage these skills for your next project? I'd love to discuss how we can create exceptional user experiences together."
           primaryText="Start a Conversation"
+          primaryLink="/contact"
           secondaryText="See My Work"
           secondaryLink="/projects"
         />

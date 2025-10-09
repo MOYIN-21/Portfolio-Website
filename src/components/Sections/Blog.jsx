@@ -156,7 +156,7 @@ const HandleSubscription = ()=>{
                     </span>
                   </div>
                   <Link
-                    to="/"
+                    to=""
                     className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
                   >
                     <p className='text-[#008080]'>View</p> 
@@ -207,7 +207,7 @@ const HandleSubscription = ()=>{
                 </span>
               </div>
               <Link
-                to="/"
+                to=""
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
                 <p className='text-[#008080]'>View</p> 
@@ -267,8 +267,9 @@ const HandleSubscription = ()=>{
           title="Want to Collaborate on an Article?"
           description="I'm always interested in writing guest posts, participating in podcasts, or collaborating on design-related content."
           primaryText="Get In Touch"
+          primaryLink="/contact"
           secondaryText="Share This Blog"
-          secondaryLink="/about"
+          secondaryLink="/blog"
            icon={<FiShare2 />}
         />
   </section>

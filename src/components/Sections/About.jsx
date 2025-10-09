@@ -293,6 +293,7 @@ const About = () => {
               title="Let's Create Something Amazing Together"
               description="I'm always excited to work on new projects and collaborate with like-minded individuals and teams."
               primaryText="Get In Touch"
+              primaryLink="/contact"
               secondaryText="View My Work"
               secondaryLink="/projects"
             />
