@@ -29,11 +29,6 @@ const skills = [
     title: "Analytics & Data",
     items: ["Google Analytics", "Mixpanel", "Amplitude", "Tableau", "SQL", "A/B Testing"],
   },
-  // {
-  //   icon: Design,
-  //   title: "Design & UX",
-  //   items: ["Figma", "Sketch", "User Research", "Wireframing", "Prototyping", "Design System"],
-  // },
   {
     icon: Technical,
     title: "Technical",
@@ -51,18 +46,6 @@ const skills = [
       "Conflict Resolution",
     ],
   },
-  // {
-  //   icon: Buisness,
-  //   title: "Business",
-  //   items: [
-  //     "Financial Modeling",
-  //     "KPI Development",
-  //     "Business Case Development",
-  //     "Risk Assessment",
-  //     "Vendor Management",
-  //     "Process Optimization",
-  //   ],
-  // },
 ];
 
 const passions = [
