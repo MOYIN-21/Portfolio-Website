@@ -3,61 +3,17 @@ import about from '../../assets/About.png'
 import { GiInfinity } from "react-icons/gi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FiLinkedin } from "react-icons/fi";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { HiOutlineDownload } from "react-icons/hi";
+
+
 
 const HomeHero = () => {
   return (
-    // <section 
-    //   id="homehero" 
-    //   className="min-h-screen bg-[#1F1F1F] py-2 flex flex-col px-4 justify-center"
-    // >
-    //   <div className='w-full md:px-72 flex flex-col gap-5'>
-    //         <hr className="w-28 border-4 border-[#009999] rounded" />
-    //         <div className="flex md:flex-row flex-col justify-between ">
-    //       <div className="space-y-6 flex flex-col items-start text-left">
-    //   <p className="text-semantic-heading1 text-[#FAFAFA]">
-    //     Hi, I'm <span className="text-[#008080]">Ugochi</span>
-    //   </p>
-
-    //   <p className="heading-2 text-[#FAFAFA]">
-    //     Building Digital Products <br /> 
-    //     That Solve Real <br /> 
-    //     Problems
-    //   </p>
-
-    //   <p className="text-inter-regular text-[#A3A3A3]">
-    //     Multidisciplinary Product Manager focused on <br />
-    //     innovation, user experience, and scalable impact. I <br />
-    //     transform complex challenges into elegant solutions <br />
-    //     that drive meaningful business outcomes.
-    //   </p>
-    // </div>
-
-
-    //     <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-teal-500/30">
-    //       <img
-    //         src={about}
-    //         alt="Profile"
-    //         className="rounded-2xl w-80 h-80 object-contain"
-    //       />
-
-    //       <div className="absolute top-2 right-2 bg-[#00C3D0] text-white px-4 py-2 rounded-xl shadow-sm flex flex-col items-center">
-    //         <GiInfinity className="text-2xl mb-1" />
-    //         <span className="text-sm font-medium">Innovation</span>
-    //       </div>
-
-    //       <div className="absolute bottom-2 left-2 bg-black/80 border border-[#EBEBEB] text-white px-4 py-2 rounded-xl shadow-md text-center">
-    //         <p className="text-lg font-bold">5+</p>
-    //         <p className="text-sm">Years Experience</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   </div>
-     
-    // </section>
     <section
-  id="homehero"
-  className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center py-10 "
->
+      id="homehero"
+      className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center py-10 "
+    >
   <div className="py-8">
       <hr className="w-14 border-3 border-[#009999] rounded"/>
   </div>
@@ -77,13 +33,25 @@ const HomeHero = () => {
       <p className="text-[#A3A3A3] text-xl leading-7 font-normal text-inter-regular">
         Multidisciplinary Product Manager focused on innovation, user experience, and scalable impact. I transform complex challenges into elegant solutions that drive meaningful business outcomes.
       </p>
-
       <div className="flex flex-col w-fit space-y-6">
-        <a
-          href="/NWOKONKO-UGOCHI V.pdf" download 
-          className='text-[#00C3D0] py-3 px-8 bg-[#141414] border w-full rounded-md border-[#00C3D0]'>
-          Download CV
+        <div className="flex flex-row gap-4">
+          <a
+            href="/NWOKONKO-UGOCHI V.pdf"
+            download
+            className="text-[#00C3D0] py-3 px-8 bg-[#141414] border gap-2 rounded-md border-[#00C3D0] flex items-center justify-center min-w-[150px]"
+          >
+            <HiOutlineDownload className="text-lg" />
+            Download CV
           </a>
+
+           <a  
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1DskkfswZM3HsWYp6LNzPnbXGcMZoZO31/view?usp=sharing"  className="text-[#00C3D0] py-3 px-8 bg-[#141414] border rounded-md border-[#00C3D0] flex items-center justify-center min-w-[150px] gap-2">
+              <MdOutlineRemoveRedEye className='text-lg'/>
+              <p>View CV</p>
+            </a>
+        </div>
 
         <div className='flex flex-row gap-3'>
           <a href='mailto:nwokonkougo@gmail.com' className="bg-[#000000] rounded-full w-11 cursor-pointer h-11 flex items-center justify-center">
@@ -96,21 +64,22 @@ const HomeHero = () => {
       </div>
     </div>
 
-    <div className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-xl shadow-teal-500/30">
+    <div className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-[0_0_30px_#00C3D0]/50 border-[6px] border-[#1F1F1F] w-80 h-96 mx-auto">
+      
       <img
         src={about}
         alt="Profile"
-        className="rounded-2xl w-80 h-80 object-contain"
+        className="rounded-2xl w-full h-full object-contain"
       />
 
-      <div className="absolute top-2 right-2 bg-[#00C3D0] text-white px-4 py-2 rounded-xl shadow-sm flex flex-col items-center">
-        <GiInfinity className="text-2xl mb-1" />
+      <div className="absolute -top-4 -right-1 bg-[#00C3D0] text-white px-2 py-4 rounded-xl shadow-md flex flex-col items-center justify-center">
+        <GiInfinity className="text-xl mb-1" />
         <span className="text-sm font-medium">Innovation</span>
       </div>
 
-      <div className="absolute bottom-2 left-2 bg-black/80 border border-[#EBEBEB] text-white px-4 py-2 rounded-xl shadow-md text-center">
-        <p className="text-lg font-bold">5+</p>
-        <p className="text-sm">Years Experience</p>
+      <div className="absolute -bottom-4 -left-4 bg-black/90 border border-gray-300 text-white px-5 py-5 rounded-xl shadow-lg text-center">
+        <p className="text-lg font-bold leading-tight">5+</p>
+        <p className="text-xs">Years Experience</p>
       </div>
     </div>
   </div>

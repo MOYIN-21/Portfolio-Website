@@ -133,24 +133,22 @@ const About = () => {
         </div>
 
        
-        {/* <div className="relative flex-shrink-0 rounded-xl overflow-hidden">
-          <img src={about} alt="Profile" className="rounded-2xl w-100 h-95 object-contain" /> */}
-          <div className="relative flex-shrink-0 rounded-xl overflow-hidden w-full md:w-[400px]">
+        <div className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-[0_0_30px_#00C3D0]/50 border-[6px] border-[#1F1F1F] w-80 h-96 mx-auto">
+              
           <img
             src={about}
             alt="Profile"
-            className="rounded-2xl w-full h-full object-cover"
+            className="rounded-2xl w-full h-full object-contain"
           />
-
-
-          <div className="absolute top-2 right-2 bg-[#00C3D0] text-white px-4 py-2 rounded-xl shadow-sm flex flex-col items-center">
-            <GiInfinity className="text-2xl mb-1" />
+    
+          <div className="absolute -top-4 -right-1 bg-[#00C3D0] text-white px-2 py-4 rounded-xl shadow-md flex flex-col items-center justify-center">
+            <GiInfinity className="text-xl mb-1" />
             <span className="text-sm font-medium">Innovation</span>
           </div>
-
-          <div className="absolute bottom-2 left-2 bg-black/80 border border-[#EBEBEB] text-white px-4 py-2 rounded-xl shadow-md text-center">
-            <p className="text-lg font-bold">5+</p>
-            <p className="text-sm">Years Experience</p>
+    
+          <div className="absolute -bottom-4 -left-4 bg-black/90 border border-gray-300 text-white px-5 py-5 rounded-xl shadow-lg text-center">
+            <p className="text-lg font-bold leading-tight">5+</p>
+            <p className="text-xs">Years Experience</p>
           </div>
         </div>
       </div>
