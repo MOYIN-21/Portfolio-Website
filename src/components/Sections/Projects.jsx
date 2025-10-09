@@ -187,13 +187,13 @@ const Projects = () => {
 
             <div className="text-inter-medium text-sm leading-5 flex flex-col sm:flex-row gap-3 pt-4">
               <Link
-                to="/"
+                to=""
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
                 <MdOutlineRemoveRedEye /> View Case Study
               </Link>
               <Link
-                to="/"
+                to=""
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
                 <FaExternalLinkAlt /> Live Demo
@@ -266,13 +266,13 @@ const Projects = () => {
 
             <div className="flex text-inter-medium text-sm leading-5 flex-col sm:flex-row gap-3 pt-4">
               <Link
-                to="/"
+                to=""
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
                 <MdOutlineRemoveRedEye /> View Case Study
               </Link>
               <Link
-                to="/"
+                to=""
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
                 <FaExternalLinkAlt /> Live Demo

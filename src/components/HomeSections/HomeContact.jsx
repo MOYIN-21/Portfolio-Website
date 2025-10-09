@@ -10,19 +10,22 @@ const contactMethods = [
     icon: Email,
     title: "Email",
     description: "nwokonkougo@gmail.com",
-    bg: "#0080801A"
+    bg: "#0080801A",
+    link: "mailto:nwokonkougo@gmail.com"
   },
   {
     icon: LinkedIn,
     title: "LinkedIn",
     description: "Connect with me professionally",
-    bg: "#646a6a1a"
+    bg: "#646a6a1a",
+    link: "https://www.linkedin.com/in/ugochi-nwokonko/"
   },
   {
     icon: calendarschedule,
     title: "Schedule a Call",
     description: "Book a time that works for you",
-    bg: "#0080801A"
+    bg: "#0080801A",
+    link: ""
   }
 ];
 
