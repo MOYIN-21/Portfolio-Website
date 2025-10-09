@@ -1,6 +1,8 @@
 import React from 'react'
 import about from '../../assets/About.png'
 import { GiInfinity } from "react-icons/gi";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FiLinkedin } from "react-icons/fi";
 
 const HomeHero = () => {
   return (
@@ -75,6 +77,23 @@ const HomeHero = () => {
       <p className="text-[#A3A3A3] text-xl leading-7 font-normal text-inter-regular">
         Multidisciplinary Product Manager focused on innovation, user experience, and scalable impact. I transform complex challenges into elegant solutions that drive meaningful business outcomes.
       </p>
+
+      <div className="flex flex-col w-fit space-y-6">
+        <a
+          href="/NWOKONKO-UGOCHI V.pdf" download 
+          className='text-[#00C3D0] py-3 px-8 bg-[#141414] border w-full rounded-md border-[#00C3D0]'>
+          Download CV
+          </a>
+
+        <div className='flex flex-row gap-3'>
+          <a href='mailto:nwokonkougo@gmail.com' className="bg-[#000000] rounded-full w-11 cursor-pointer h-11 flex items-center justify-center">
+            <MdOutlineMailOutline className="text-white text-xl h-5 w-5" />
+          </a>
+          <a href='https://www.linkedin.com/in/ugochi-nwokonko/' className="bg-[#000000] cursor-pointer rounded-full w-11 h-11 flex items-center justify-center">
+            <FiLinkedin className="text-white text-xl" />
+          </a>
+        </div>
+      </div>
     </div>
 
     <div className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-xl shadow-teal-500/30">
