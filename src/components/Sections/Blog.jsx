@@ -159,7 +159,7 @@ const HandleSubscription = ()=>{
                     to="/"
                     className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
                   >
-                    <p className='text-[#008080]'>Read More</p> 
+                    <p className='text-[#008080]'>View</p> 
                     <TiArrowRight className="text-[#008080] mt-1" />
                   </Link>
                 </div>
@@ -210,7 +210,7 @@ const HandleSubscription = ()=>{
                 to="/"
                 className="inline-flex items-center gap-2 rounded-md bg-[#141414] text-[#FAFAFA] py-2.5 px-3"
               >
-                <p className='text-[#008080]'>Read More</p> 
+                <p className='text-[#008080]'>View</p> 
                 <TiArrowRight className="text-[#008080] mt-1" />
               </Link>
             </div>
