@@ -91,7 +91,7 @@ const About = () => {
   return (
     <section
       id="homehero"
-      className="min-h-screen w-full px-4 flex flex-col md:px-10 xl:px-12 space-y-24 items-center py-10 md:pt-48"
+      className="min-h-screen w-full px-4 flex flex-col md:px-10 xl:px-12 space-y-24 items-center py-10 pt-48"
     >
       
       <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">

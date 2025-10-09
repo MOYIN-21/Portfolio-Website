@@ -120,7 +120,7 @@ const Skills = () => {
   return (
     <section
       id="homeabout"
-      className="min-h-screen px-4 md:px-16 lg:px-24 flex flex-col items-center space-y-20 py-10 md:pt-30"
+      className="min-h-screen px-4 md:px-16 lg:px-24 flex flex-col items-center space-y-20 py-10 pt-30"
     >
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto " />
        <div className="flex flex-col text-center space-y-5">
