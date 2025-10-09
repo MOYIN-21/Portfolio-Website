@@ -74,12 +74,12 @@ const HomeHero = () => {
 
       <div className="absolute -top-4 -right-1 bg-[#00C3D0] text-white px-2 py-4 rounded-xl shadow-md flex flex-col items-center justify-center">
         <GiInfinity className="text-xl mb-1" />
-        <span className="text-sm font-medium">Innovation</span>
+        <span className="text-[14px] leading-5 text-inter-regular">Innovation</span>
       </div>
 
       <div className="absolute -bottom-4 -left-4 bg-black/90 border border-gray-300 text-white px-5 py-5 rounded-xl shadow-lg text-center">
-        <p className="text-lg font-bold leading-tight">5+</p>
-        <p className="text-xs">Years Experience</p>
+        <p className="text-2xl text-inter-bold leading-8 text-[#FAFAFA]">5+</p>
+        <p className="text-[14px] leading-5 text-inter-regular">Years Experience</p>
       </div>
     </div>
   </div>
