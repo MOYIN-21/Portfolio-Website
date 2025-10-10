@@ -25,7 +25,7 @@ const contactMethods = [
     title: "Schedule a Call",
     description: "Book a time that works for you",
     bg: "#0080801A",
-    link: ""
+    link: "https://calendly.com/ugochi/30min"
   }
 ];
 
@@ -44,12 +44,17 @@ const HomeContact = () => {
     message: false
   });
 
+  const [status, setStatus] = useState('');
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: false });
+    setStatus('');
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     const newErrors = {
       name: !formData.name,
       email: !formData.email,
@@ -59,13 +64,32 @@ const HomeContact = () => {
     setErrors(newErrors);
 
     const hasError = Object.values(newErrors).some(Boolean);
-    if (!hasError) {
-      alert('Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' }); 
+    if (hasError) {
+      setStatus('Please fill in all required fields.');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://formspree.io/f/xpwyyqky', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setErrors({ name: false, email: false, subject: false, message: false });
+      } else {
+        setStatus('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setStatus('Error sending message. Please try again later.');
     }
   };
-
-  const isFormValid = formData.name && formData.email && formData.subject && formData.message;
 
   return (
     <section id="homecontact" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center">
@@ -101,17 +125,21 @@ const HomeContact = () => {
                     style={{ backgroundColor: item.bg }}
                     className='rounded-lg p-3 flex items-center justify-center'
                   >
-                    <img src={item.icon} alt={item.title} className="w-6 h-6 md:w-8 md:h-8"/>
-                  </div> 
+                    <img src={item.icon} alt={item.title} className="w-6 h-6 md:w-8 md:h-8" />
+                  </div>
                   <div className='flex flex-col'>
                     <p className='text-[#FAFAFA] text-semantic-heading2 text-base md:text-lg'>{item.title}</p>
-                    <p className='text-[#D9D9D9] text-inter-regular text-sm'>{item.description}</p>
+                    <a href={item.link} target='_blank' rel='noopener noreferrer'>
+                      <p className='text-[#D9D9D9] text-inter-regular text-sm hover:text-[#00CCCC] transition'>
+                        {item.description}
+                      </p>
+                    </a>
                   </div>
                 </div>
               ))}
 
               <span className='flex flex-row gap-3 items-start mt-2'>
-                <img src={Location} alt="Location" className="w-5 h-5 md:w-6 md:h-6 mt-1"/>
+                <img src={Location} alt="Location" className="w-5 h-5 md:w-6 md:h-6 mt-1" />
                 <p className='text-[#D9D9D9] text-inter-regular text-sm md:text-base leading-6'>
                   Based in Lagos, Nigeria, CA • Open to remote opportunities
                 </p>
@@ -119,74 +147,79 @@ const HomeContact = () => {
             </div>
           </div>
 
-        
           <div className='w-full md:w-1/2 flex flex-col space-y-4 px-6 py-8 bg-[#262626] rounded-xl'>
             <p className='text-[#FAFAFA] playfair-text-semantic-heading3 text-2xl md:text-3xl leading-8'>
               Send a Message
             </p>
 
-            <div className='flex flex-col md:flex-row gap-5 w-full'>
-              <div className='flex flex-col flex-1'>
-                <p className='text-inter-medium size-sm leading-3'>Name</p>
+            <form onSubmit={handleSubmit} className='flex flex-col gap-5 w-full'>
+              <div className='flex flex-col md:flex-row gap-5 w-full'>
+                <div className='flex flex-col flex-1'>
+                  <p className='text-inter-medium size-sm leading-3'>Name</p>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    className={`bg-[#141414] mt-4 placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.name ? 'border text-[#00CCCC]' : ''}`}
+                  />
+                  {errors.name && <span className="text-[#00CCCC] text-sm mt-1">Field is required</span>}
+                </div>
+
+                <div className='flex flex-col flex-1'>
+                  <p className='text-inter-medium size-sm leading-3'>Email</p>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Your@email.com"
+                    className={`bg-[#141414] mt-4 placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.email ? 'border text-[#00CCCC]' : ''}`}
+                  />
+                  {errors.email && <span className="text-[#00CCCC] text-sm mt-1">Field is required</span>}
+                </div>
+              </div>
+
+              <div className='flex flex-col gap-4 w-full'>
+                <p className='text-inter-medium size-sm leading-3'>Subject</p>
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Your name"
-                  className={`bg-[#141414] mt-4 placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.name ? 'border border-red-500' : ''}`}
+                  placeholder="What would you like to discuss?"
+                  className={`bg-[#141414] placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.subject ? 'border text-[#00CCCC]' : ''}`}
                 />
-                {errors.name && <span className="text-red-500 text-sm mt-1">Field is required</span>}
+                {errors.subject && <span className="text-[#00CCCC] text-sm mt-1">Field is required</span>}
               </div>
 
-              <div className='flex flex-col flex-1'>
-                <p className='text-inter-medium size-sm leading-3'>Email</p>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
+              <div className='flex flex-col gap-4'>
+                <p className='text-inter-medium size-sm leading-3'>Message</p>
+                <textarea
+                  name="message"
+                  value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your@email.com"
-                  className={`bg-[#141414] mt-4 placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.email ? 'border border-red-500' : ''}`}
+                  placeholder="Tell me about your project, opportunity, or how I can help..."
+                  className={`bg-[#141414] placeholder:text-[#D9D9D9] text-inter-medium size-sm leading-3 rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full h-32 resize-none ${errors.message ? 'border text-[#00CCCC]' : ''}`}
                 />
-                {errors.email && <span className="text-red-500 text-sm mt-1">Field is required</span>}
+                {errors.message && <span className="text-[#00CCCC] text-sm mt-1">Field is required</span>}
               </div>
-            </div>
 
-            <div className='flex flex-col gap-4 w-full'>
-              <p className='text-inter-medium size-sm leading-3'>Subject</p>
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="What would you like to discuss?"
-                className={`bg-[#141414] placeholder:text-[#D9D9D9] rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full ${errors.subject ? 'border border-red-500' : ''}`}
-              />
-              {errors.subject && <span className="text-red-500 text-sm mt-1">Field is required</span>}
-            </div>
+              <button
+                type='submit'
+                className='bg-[#141414] rounded-md flex items-center justify-center gap-2 px-4 py-2.5 w-full text-[#FAFAFA] hover:bg-[#1a1a1a] transition'
+              >
+                <img src={Send} alt="Send" className="w-4 h-4" />
+                <span className='text-inter-medium text-sm leading-5'>Send Message</span>
+              </button>
 
-            <div className='flex flex-col gap-4'>
-              <p className='text-inter-medium size-sm leading-3'>Message</p>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Tell me about your project, opportunity, or how I can help..."
-                className={`bg-[#141414] placeholder:text-[#D9D9D9] text-inter-medium size-sm leading-3 rounded-md outline-none text-[#FAFAFA] px-3 py-2.5 w-full h-32 resize-none ${errors.message ? 'border border-red-500' : ''}`}
-              />
-              {errors.message && <span className="text-red-500 text-sm mt-1">Field is required</span>}
-            </div>
-
-            <button
-              type='button'
-              disabled={!isFormValid}
-              onClick={handleSubmit}
-              className={`bg-[#141414] rounded-md flex items-center justify-center gap-2 px-4 py-2.5 w-full text-[#FAFAFA] hover:bg-[#1a1a1a] transition ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
-            >
-              <img src={Send} alt="Send" className="w-4 h-4" />
-              <span className='text-inter-medium text-sm leading-5'>Send Message</span>
-            </button>
+              {status && (
+                <p className={`text-sm mt-2 ${status.includes("successfully") ? "text-green-400" : "text-[#00CCCC]"}`}>
+                  {status}
+                </p>
+              )}
+            </form>
           </div>
         </div>
       </div>
