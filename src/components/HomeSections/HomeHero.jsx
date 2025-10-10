@@ -12,7 +12,7 @@ const HomeHero = () => {
   return (
     <section
       id="homehero"
-      className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center py-10 "
+      className="min-h-screen bg-[#1F1F1F] flex flex-col px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 justify-center py-10 pt-20 "
     >
   <div className="py-8">
       <hr className="w-14 border-3 border-[#009999] rounded"/>
@@ -20,8 +20,8 @@ const HomeHero = () => {
   <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-16 items-start">
     
     <div className="flex-1 space-y-6">
-      <p className="text-semantic-heading1 leading-10 md:text-7xl text-2xl text-[#FAFAFA]">
-        Hi, I'm <span className="text-[#008080]">Ugochi</span>
+      <p className="font-bold text-[#FAFAFA] text-semantic-heading1 text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-[1.1] tracking-tight">
+        Hi, I'm <span className="text-[#008080] block sm:inline">Ugochi</span>
       </p>
 
       <p className="text-semantic-heading2 md:text-5xl text-4xl leading-12 text-[#FAFAFA] ">

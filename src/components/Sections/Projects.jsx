@@ -133,11 +133,11 @@ const Projects = () => {
           className="flex flex-col md:flex-row bg-[#1F1F1F] w-full max-w-7xl rounded-3xl border border-[#EBEBEB80] overflow-hidden"
         >
           
-          <div className="hidden md:block w-1/2">
+          <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden relative flex items-center justify-center">
             <img
               src={featureProjects}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-contain rounded-t-3xl md:rounded-l-3xl"
             />
           </div>
 
