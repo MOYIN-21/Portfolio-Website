@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import email from '../../assets/email.svg';
 import LinkedIn from '../../assets/LinkedIn.svg';
 import calendarschedule from '../../assets/calendarschedule.svg';
@@ -67,7 +67,42 @@ const faqs = [
 ];
 
 const Contact = () => {
-  const handleSubmit = () => {};
+  
+   const [status, setStatus] = useState(""); 
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      company: form.company.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpwyyqky", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        form.reset();
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Error sending message. Please try again later.");
+    }
+  };
+
 
   return (
     <section
@@ -98,12 +133,12 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-12 w-full max-w-6xl pt-10 md:pt-48">
         <div className="flex-1 space-y-4">
           <h3 className=" text-[#FAFAFA] leading-8 text-semantic-heading2 text-2xl">Send a Message</h3>
-          <p className="text-sm text-[#D9D9D9] text-inter-regular text-sm leading-6">
+          <p className="text-[#D9D9D9] text-inter-regular text-sm leading-6">
             Fill out the form below and I'll get back to you as soon as possible. Include as much
             detail about your project as you can.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 space-y-2">
                 <span className="flex flex-row gap-1">
@@ -111,18 +146,23 @@ const Contact = () => {
                   <p className='leading-3.5'>*</p>
                 </span>
                 <input
-                  type="text" required
-                  className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3"
+                  type="text"
+                  name="name"
+                  required
+                  className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3 focus:outline-none focus:border-[#00C3D0]"
                 />
               </div>
+
               <div className="flex-1 space-y-2">
                 <span className="flex flex-row gap-1">
-                <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Email Address</p>
+                  <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Email Address</p>
                   <p className='leading-3.5'>*</p>
                 </span>
                 <input
-                  type="email" required
-                  className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3"
+                  type="email"
+                  name="email"
+                  required
+                  className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3 focus:outline-none focus:border-[#00C3D0]"
                 />
               </div>
             </div>
@@ -131,56 +171,55 @@ const Contact = () => {
               <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Company / Organization</p>
               <input
                 type="text"
-                className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3"
+                name="company"
+                className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3 focus:outline-none focus:border-[#00C3D0]"
               />
             </div>
 
             <div className='space-y-2'>
               <span className="flex flex-row gap-1">
-              <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Subject</p>
-                  <p className='leading-3.5'>*</p>
-                </span>
+                <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Subject</p>
+                <p className='leading-3.5'>*</p>
+              </span>
               <input
-                type="text" required
-                className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3"
+                type="text"
+                name="subject"
+                required
+                className="border border-[#262626] bg-transparent text-white h-10 w-full rounded-md px-3 focus:outline-none focus:border-[#00C3D0]"
               />
             </div>
 
             <div className="flex flex-col items-start space-y-2">
-            <span className="flex items-center gap-1">
-              <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">
-                Message
-              </p>
-              <p className="leading-3.5">*</p>
-            </span>
-
-            <textarea
-              required
-              className="border border-[#262626] bg-transparent text-white w-full rounded-md p-3 min-h-[100px] focus:outline-none focus:border-[#00C3D0]"
-            ></textarea>
-          </div>
-
-
-
-            {/* <div className='flex flex-col items-start space-y-2'>
-              <span className="flex items-start gap-1">
-              <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Message</p>
-                  <p className='text-[#00C3D0]"'>*</p>
-                </span>
-              <textarea required
-                className="border border-[#262626] bg-transparent text-white w-full rounded-md p-3 min-h-[100px]"
+              <span className="flex items-center gap-1">
+                <p className="text-[#FAFAFA] text-sm text-semantic-heading2 leading-3.5">Message</p>
+                <p className="leading-3.5">*</p>
+              </span>
+              <textarea
+                name="message"
+                required
+                className="border border-[#262626] bg-transparent text-white w-full rounded-md p-3 min-h-[100px] focus:outline-none focus:border-[#00C3D0]"
               ></textarea>
-            </div> */}
+            </div>
 
             <button
-              type="button"
-              onClick={handleSubmit}
+              type="submit"
               className="flex items-center cursor-pointer justify-center gap-2 px-4 py-2.5 w-full text-[#FAFAFA]"
             >
               <img src={Send} alt="Send" className="w-4 h-4" />
               <span className='text-inter-medium text-sm leading-5 cursor-pointer'>Send Message</span>
             </button>
+
+            {status && (
+              <p
+                className={`text-sm mt-2 ${
+                  status.includes("success") ? "text-green-400" : "text-red-400"
+                }`}
+              >
+                {status}
+              </p>
+            )}
           </form>
+
         </div>
 
         <div className="flex-1">
