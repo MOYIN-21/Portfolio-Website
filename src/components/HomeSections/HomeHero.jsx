@@ -38,7 +38,7 @@ const HomeHero = () => {
           <a
             href="/NWOKONKO-UGOCHI V.pdf"
             download
-            className="text-[#00C3D0] py-3 px-8 bg-[#141414] border gap-2 rounded-md border-[#00C3D0] flex items-center justify-center min-w-[150px]"
+            className="text-[#00C3D0] md:py-3 p-2 md:px-8 bg-[#141414] border gap-2 rounded-md border-[#00C3D0] flex items-center justify-center w-fit"
           >
             <HiOutlineDownload className="text-lg" />
             Download CV
@@ -47,7 +47,7 @@ const HomeHero = () => {
            <a  
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1DskkfswZM3HsWYp6LNzPnbXGcMZoZO31/view?usp=sharing"  className="text-[#00C3D0] py-3 px-8 bg-[#141414] border rounded-md border-[#00C3D0] flex items-center justify-center min-w-[150px] gap-2">
+            href="https://drive.google.com/file/d/1DskkfswZM3HsWYp6LNzPnbXGcMZoZO31/view?usp=sharing"  className="text-[#00C3D0] md:py-3 md:px-8 p-2 bg-[#141414] border rounded-md border-[#00C3D0] flex items-center justify-center w-fit gap-2">
               <MdOutlineRemoveRedEye className='text-lg'/>
               <p>View CV</p>
             </a>
