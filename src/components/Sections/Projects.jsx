@@ -137,7 +137,7 @@ const Projects = () => {
             <img
               src={featureProjects}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
 
