@@ -141,7 +141,7 @@ const HomeContact = () => {
               <span className='flex flex-row gap-3 items-start mt-2'>
                 <img src={Location} alt="Location" className="w-5 h-5 md:w-6 md:h-6 mt-1" />
                 <p className='text-[#D9D9D9] text-inter-regular text-sm md:text-base leading-6'>
-                  Based in Lagos, Nigeria, CA • Open to remote opportunities
+                  Based in Lagos, Nigeria • Open to remote opportunities
                 </p>
               </span>
             </div>

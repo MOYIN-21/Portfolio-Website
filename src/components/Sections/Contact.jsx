@@ -228,7 +228,7 @@ const Contact = () => {
               <img src={Location} alt="location" className="w-6 h-6" />
               <h3 className=" text-[#FAFAFA] text-xl leading-7 playfair-text-semantic-heading3">Location & Availability</h3>
             </div>
-            <p className="text-sm text-[#D9D9D9] leading-6 text-inter-medium">Based in San Francisco, CA</p>
+            <p className="text-sm text-[#D9D9D9] leading-6 text-inter-medium">Based in Lagos, Nigeria</p>
             <div className="flex justify-between text-sm text-[#FAFAFA]">
               <div className="space-y-3 text-inter-medium text-[14px] leading-5">
                 <p>Monday - Friday</p>
@@ -240,7 +240,7 @@ const Contact = () => {
                 <p>9:00 AM - 6:00 PM PST</p>
                 <p>Limited availability</p>
                 <p>Within 24 hours</p>
-                <p>Pacific Standard Time (PST)</p>
+                <p>Greenwich Mean Time (GMT +1)</p>
               </div>
             </div>
           </div>

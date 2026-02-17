@@ -39,7 +39,7 @@ const HomeAbout = () => {
   ];
 
   return (
-    <section id="homeabout" className="min-h-screen px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center">
+    <section id="homeabout" className="px-4 md:px-16 lg:px-24 xl:px-72 2xl:72 flex flex-col items-center">
       <hr className="w-24 border-3 border-[#009999] rounded mx-auto mt-4" />
 
       <p className="font-medium text-2xl lg:text-4xl playfair-text-semantic-heading2 md:text-5xl leading-12 tracking-normal text-center text-[#FAFAFA] mt-4">
@@ -63,7 +63,7 @@ const HomeAbout = () => {
         ))}
       </div>
 
-      <div className="flex flex-col items-center mt-10 bg-[#1F1F1F] w-full max-w-5xl px-6 md:px-12 py-12 rounded-2xl text-center">
+      {/* <div className="flex flex-col items-center mt-10 bg-[#1F1F1F] w-full max-w-5xl px-6 md:px-12 py-12 rounded-2xl text-center">
         <div className="text-[#FAFAFA] text-semantic-blockquote text-xl leading-8">
           "Great products aren't just built—they're crafted with intention, empathy, and <br />
           an unwavering commitment to solving real human problems."
@@ -75,9 +75,9 @@ const HomeAbout = () => {
           <div>100M+</div>
           <div>15+</div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col justify-start mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl px-6 md:px-8 py-10 rounded-2xl">
+      {/* <div className="flex flex-col justify-start mt-10 bg-[#1F1F1F] border border-[#EBEBEB80] w-full max-w-5xl px-6 md:px-8 py-10 rounded-2xl">
         <div className="flex items-center gap-3">
           <img src={Love} alt="Impact" className="w-6 h-6" />
           <p className="Text-playfair-display-semiBold text-xl leading-7 text-[#FAFAFA] tracking-normal">
@@ -95,7 +95,7 @@ const HomeAbout = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

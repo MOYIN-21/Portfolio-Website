@@ -35,13 +35,16 @@ const HomeHero = () => {
       </p>
       <div className="flex flex-col w-fit space-y-6">
         <div className="flex flex-row gap-4">
-          <a
-            href="/NWOKONKO-UGOCHI V.pdf"
-            download
-            className="text-[#00C3D0] md:py-3 p-2 md:px-8 bg-[#141414] border gap-2 rounded-md border-[#00C3D0] flex items-center justify-center w-fit"
-          >
-            <HiOutlineDownload className="text-lg" />
-            Download CV
+          {/*<a*/}
+          {/*  href="/NWOKONKO-UGOCHI V.pdf"*/}
+          {/*  download*/}
+          {/*  className="text-[#00C3D0] md:py-3 p-2 md:px-8 bg-[#141414] border gap-2 rounded-md border-[#00C3D0] flex items-center justify-center w-fit"*/}
+          {/*>*/}
+          {/*  <HiOutlineDownload className="text-lg" />*/}
+          {/*  Download CV*/}
+          {/*</a>*/}
+          <a href='https://www.linkedin.com/in/ugochi-nwokonko/' className="bg-[#000000] cursor-pointer rounded-full w-11 h-11 flex items-center justify-center">
+            <FiLinkedin className="text-white text-xl" />
           </a>
 
            <a  
@@ -54,12 +57,12 @@ const HomeHero = () => {
         </div>
 
         <div className='flex flex-row gap-3'>
-          <a href='mailto:nwokonkougo@gmail.com' className="bg-[#000000] rounded-full w-11 cursor-pointer h-11 flex items-center justify-center">
+          {/* <a href='mailto:nwokonkougo@gmail.com' className="bg-[#000000] rounded-full w-11 cursor-pointer h-11 flex items-center justify-center">
             <MdOutlineMailOutline className="text-white text-xl h-5 w-5" />
-          </a>
-          <a href='https://www.linkedin.com/in/ugochi-nwokonko/' className="bg-[#000000] cursor-pointer rounded-full w-11 h-11 flex items-center justify-center">
+          </a> */}
+          {/* <a href='https://www.linkedin.com/in/ugochi-nwokonko/' className="bg-[#000000] cursor-pointer rounded-full w-11 h-11 flex items-center justify-center">
             <FiLinkedin className="text-white text-xl" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

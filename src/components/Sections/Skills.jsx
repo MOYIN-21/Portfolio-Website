@@ -27,22 +27,21 @@ const skills = [
   {
     icon: Analytics,
     title: "Analytics & Data",
-    items: ["Google Analytics", "Mixpanel", "Amplitude", "Tableau", "SQL", "A/B Testing"],
+    items: ["Google Analytics", "Mixpanel", "Amplitude", "Posthug", "SQL", "A/B Testing"],
   },
   {
     icon: Technical,
     title: "Technical",
-    items: ["HTML/CSS", "Javascript", "Python", "API Design", "Agile/Scrum", "JIRA"],
-  },
+  items: ["React/HTML/CSS", "Java/Phyton/Javascript","Third Party Integration", "API Testing", "Vibe Coding/Prompt Engineering", "AI & Automation"],  },
   {
     icon: Leadership,
     title: "Leadership",
-    items: [
+     items: [
       "Team Management",
       "Stakeholder Management",
-      "Cross-functional Collaboration",
+      "Agile and Scrum Ceremonies",
+            "Communication",
       "Mentoring",
-      "Communication",
       "Conflict Resolution",
     ],
   },
@@ -58,17 +57,24 @@ const passions = [
 ];
 
 const tools = [
-  { name: "Notion", category: "Documentation" },
-  { name: "Slack", category: "Communication" },
-  { name: "Zoom", category: "Communication" },
+  { name: "Confluence/Notion", category: "Documentation" },
+  { name: "Slack/Zoom/Teams", category: "Communication" },
+  { name: "Miro", category: "Draw.io" },
   { name: "Asana", category: "Project Management" },
   { name: "Trello", category: "Project Management" },
   { name: "GitHub", category: "Development" },
-  { name: "AWS", category: "Cloud" },
-  { name: "Docker", category: "Development" },
+    { name: "Jira&Linear", category: "Backlog Mgt" },
+  { name: "Swagger/Potman", category: "Api Testing" },
+  { name: "Lovable", category: "Prototyping" },
+  { name: "Survey Math", category: "User researcher" },
+  { name: "Cursor/VsCode", category: "Development" },
+  { name: "Figma", category: "Design" },
+    { name: "Survey Math", category: "User Research" },
+  // { name: "AWS", category: "Cloud" },
+  // { name: "Docker", category: "Development" },
   { name: "Postman", category: "API Testing" },
   { name: "Hotjar", category: "User Insights" },
-  { name: "Intercom", category: "Customer Support" },
+  // { name: "Intercom", category: "Customer Support" },
   { name: "Stripe", category: "Payments" },
 ];
 
