@@ -44,13 +44,15 @@ const projects = [
       "85% user satisfaction score",
       "300% increase in organic traffic"
     ],
-    techStack: ["React Native", "Blockchain", "Node.js", "AWS"],
+    resources: [
+      { name: "PRD", url: "https://docs.google.com/document/d/1Tx2XBmmKK9BlWeWVi_XUHSawfPjOsEYm4ZOnWb1GNQo/edit" },
+      { name: "User Flow", url: "https://whimsical.com/signalhub-userflow-PE7Ataa7JMSWes7wDMPGAX" },
+      { name: "Model", url: "https://docs.google.com/presentation/d/18oxS6OfVN9IPnYv1Hl6geudzXJq14PQy/edit" },
+      // { name: "Business Case", url: "https://docs.google.com/document/d/1Tszt9Ck5dzFXyFZNhmU1SuQQKVMPZZuTaYTrhGFMCxs/edit" }
+    ],
     link: "https://meedl.africa/",
-    // prd: "https://docs.google.com/document/d/1Tx2XBmmKK9BlWeWVi_XUHSawfPjOsEYm4ZOnWb1GNQo/edit?tab=t.0#heading=h.rubijo5we7h7",
-    // userFlow: "https://whimsical.com/signalhub-userflow-PE7Ataa7JMSWes7wDMPGAX",
-    // model: "https://docs.google.com/presentation/d/18oxS6OfVN9IPnYv1Hl6geudzXJq14PQy/edit?slide=id.p1#slide=id.p1",
-    // buisnessCase: "https://docs.google.com/document/d/1Tszt9Ck5dzFXyFZNhmU1SuQQKVMPZZuTaYTrhGFMCxs/edit?usp=sharing"
-  }
+    buisnessCase: ""
+  },
 ];
 
 const HomeProjects = () => {
