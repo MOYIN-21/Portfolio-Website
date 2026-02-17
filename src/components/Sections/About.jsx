@@ -262,32 +262,32 @@ const About = () => {
           </div>
         </div>
 
-        <div className='flex flex-col space-y-12 max-w-6xl text-center w-full'>
+        <div className='flex flex-col space-y max-w-6xl text-center w-full'>
           <div className='flex flex-col space-y-6'>
-            <p className="playfair-text-semantic-heading2 leading-8 text-center text-[#FAFAFA]">
-              Professional Experience
-            </p>
-            <p className="text-[#A1A1AA] text-inter-regular text-lg leading-5 max-w-2xl mx-auto">
-              Beyond design, I'm passionate about continuous learning and giving back to
-              the design community.
-            </p>
+          {/*  <p className="playfair-text-semantic-heading2 leading-8 text-center text-[#FAFAFA]">*/}
+          {/*    Professional Experience*/}
+          {/*  </p>*/}
+          {/*  <p className="text-[#A1A1AA] text-inter-regular text-lg leading-5 max-w-2xl mx-auto">*/}
+          {/*    Beyond design, I'm passionate about continuous learning and giving back to*/}
+          {/*    the design community.*/}
+          {/*  </p>*/}
 
-            <div className="mt-8">
-              <div className="flex flex-wrap gap-4 lg:grid-rows-3 md:grid-rows-2 xl:grid-rows-2 grid-rows-1">
-                {interests.map((Interest, idx) => (
-                  <div
-                    key={idx}
-                    className="text-inter-medium flex items-center text-sm h-14 w-md leading-6 bg-[#1F1F1F80] justify-start p-4 rounded-sm border-2 border-[#33333380] text-[#FAFAFA]"
-                  >
-                    {Interest}
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/*  <div className="mt-8">*/}
+          {/*    <div className="flex flex-wrap gap-4 lg:grid-rows-3 md:grid-rows-2 xl:grid-rows-2 grid-rows-1">*/}
+          {/*      {interests.map((Interest, idx) => (*/}
+          {/*        <div*/}
+          {/*          key={idx}*/}
+          {/*          className="text-inter-medium flex items-center text-sm h-14 w-md leading-6 bg-[#1F1F1F80] justify-start p-4 rounded-sm border-2 border-[#33333380] text-[#FAFAFA]"*/}
+          {/*        >*/}
+          {/*          {Interest}*/}
+          {/*        </div>*/}
+          {/*      ))}*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
 
-            <div className='md:py-30 py-10'>
-              <hr className="md:w-md w-full border border-[#333333] rounded mx-auto" />
-            </div>
+          {/*  <div className='md:py-30 py-10'>*/}
+          {/*    <hr className="md:w-md w-full border border-[#333333] rounded mx-auto" />*/}
+          {/*  </div>*/}
 
             <FooterCTASection
               title="Let's Create Something Amazing Together"
