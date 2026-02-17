@@ -28,8 +28,8 @@ const projects = [
     //   // { name: "Business Case", url: "https://docs.google.com/document/d/1Tszt9Ck5dzFXyFZNhmU1SuQQKVMPZZuTaYTrhGFMCxs/edit" }
     // ],
     // // techStack: ["React", "Python", "TensorFlow", "AWS"],
-    // link: "https://studio--studio-4626559585-22018.us-central1.hosted.app/",
-    // buisnessCase: "https://docs.google.com/document/d/1Tszt9Ck5dzFXyFZNhmU1SuQQKVMPZZuTaYTrhGFMCxs/edit?usp=sharing"
+    link: "https://meedl.africa/",
+    buisnessCase: ""
   },
   {
     title: "SIGNAL HUB",
