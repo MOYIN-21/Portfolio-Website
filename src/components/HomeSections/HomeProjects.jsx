@@ -213,6 +213,12 @@ const HomeProjects = () => {
               </div>
           ))}
         </div>
+        <Link to="/projects">
+          <p className="playfair-text-semantic-heading2 pt-6 md:text-3xl text-2xl leading-8 text-[#FAFAFA] hover:text-[#00C3D0] transition duration-300 cursor-pointer">
+            Click to see more Projects
+          </p>
+        </Link>
+        {/*<p className='playfair-text-semantic-heading2 md:text-3xl text-2xl leading-8 text-[#FAFAFA]'>More Projects</p>*/}
       </div>
     </section>
   )
