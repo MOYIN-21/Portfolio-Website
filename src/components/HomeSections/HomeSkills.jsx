@@ -46,7 +46,7 @@ const skills = [
       "Agile and Scrum Ceremonies",
             "Communication",
       "Mentoring",
-      "Conflict Resolution",
+      // "Conflict Resolution",
     ],
   },
   {
